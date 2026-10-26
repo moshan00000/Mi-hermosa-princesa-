@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#dbeafe">
+<title>Para mi Azul 💙</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%92%99%3C/text%3E%3C/svg%3E">
+<style>
+:root{--navy:#18366d;--blue:#4e80d8;--pale:#edf5ff;--ink:#243557;--glass:rgba(255,255,255,.79)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 15% 10%,#fff 0,transparent 38%),linear-gradient(145deg,#edf6ff,#dceaff 48%,#f6f1ff);overflow-x:hidden}
+button{font:inherit}
+.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.sparkle{position:absolute;color:#fff;text-shadow:0 0 14px #79a7ff;animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+.petal{position:absolute;top:-12vh;font-size:clamp(17px,3vw,30px);opacity:.72;animation:fall linear infinite;filter:drop-shadow(0 4px 5px #8eb4e955)}
+@keyframes fall{0%{transform:translate3d(0,-10vh,0) rotate(0deg);opacity:0}10%{opacity:.8}50%{transform:translate3d(45px,55vh,0) rotate(190deg)}100%{transform:translate3d(-20px,115vh,0) rotate(390deg);opacity:0}}
+.wrap{position:relative;z-index:1;width:min(920px,100%);margin:auto;padding:22px 16px 60px}
+.topline{text-align:center;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:#5878ad;font-weight:800;margin:12px 0 18px}
+.hero{text-align:center;padding:clamp(28px,7vw,70px) 18px 38px}
+.flower-mark{font-size:clamp(44px,8vw,76px);display:inline-block;animation:sway 4s ease-in-out infinite;filter:drop-shadow(0 7px 10px #789fe955)}
+@keyframes sway{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(8deg) translateY(-7px)}}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;color:var(--navy);font-size:clamp(2.65rem,8vw,5.5rem);line-height:.98;letter-spacing:-.045em;margin:18px 0}
+.subtitle{max-width:570px;margin:0 auto;color:#52688f;font-size:clamp(1rem,2.8vw,1.2rem);line-height:1.8}
+.card{background:var(--glass);border:1px solid #fff;box-shadow:0 18px 55px #486ba51a, inset 0 1px 0 #fff;border-radius:28px;padding:clamp(22px,5vw,44px);margin:18px 0;backdrop-filter:blur(12px)}
+.eyebrow{font-size:.74rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#6084c3;margin-bottom:14px}
+h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.13;color:var(--navy);margin:0 0 18px}
+p{line-height:1.85;margin:0 0 14px}
+p:last-child{margin-bottom:0}
+.letter{font-size:1.02rem}
+.quote-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.quote{padding:20px;border-radius:20px;background:linear-gradient(145deg,#f6f9ff,#e7f0ff);border:1px solid #d8e6ff}
+.quote p{font-family:Georgia,"Times New Roman",serif;font-size:1.12rem;line-height:1.55;color:#25477f}
+.quote small{display:block;color:#7790ba;margin-top:10px;font-size:.78rem}
+.note{font-size:.88rem;color:#6d7fa0;margin-top:18px}
+.center{text-align:center}
+.btn{border:0;border-radius:999px;padding:15px 24px;background:linear-gradient(135deg,#3267bb,#759de9);color:white;font-weight:800;box-shadow:0 9px 24px #4d7edb40;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px #4d7edb55}
+.btn:focus-visible{outline:3px solid #18366d;outline-offset:4px}
+.proposal{display:none;text-align:center;padding-top:20px;animation:rise .7s ease both}
+.proposal.show{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.big-heart{font-size:3.8rem;animation:heartbeat 1.3s ease-in-out infinite;display:inline-block}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.answer{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,6vw,3.8rem);color:var(--navy);line-height:1.12;margin:14px 0 18px}
+.signature{color:#6682b2;font-weight:700;margin-top:24px}
+footer{text-align:center;color:#7186aa;font-size:.83rem;padding:20px 8px}
+.blue-flower{color:#477bd0}
+@media(max-width:620px){.quote-grid{grid-template-columns:1fr}.wrap{padding-inline:12px}.card{border-radius:23px}.hero{padding-top:35px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+<main class="wrap">
+  <div class="topline">Un pequeño universo para ti</div>
+  <header class="hero">
+    <div class="flower-mark" aria-hidden="true">🪻💙🪻</div>
+    <h1>Para mi Azul</h1>
+    <p class="subtitle">Hice este rinconcito para ti, mi reina. No caben aquí todas las cosas que siento, pero sí una pequeña parte de todo lo que quiero decirte.</p>
+  </header>
+
+  <section class="card">
+    <div class="eyebrow">De mí para ti</div>
+    <h2>Si pudiera regalarte una flor por cada vez que te he pensado…</h2>
+    <div class="letter">
+      <p>Mi amorcito,</p>
+      <p>Si algo se nota cuando te escribo es que nunca sé quererte en voz bajita. Me salen los “TE AMO” enormes, los <em>wiwiwiwi</em>, los corazones azules y rosas, los “mi reina” y las ganas de contarte hasta la cosa más pequeña de mi día.</p>
+      <p>Pero detrás de todas mis letras alargadas y mis mensajes llenos de emoción hay algo muy sencillo y muy de verdad: <strong>eres alguien con quien quiero seguir compartiendo la vida</strong>. Me hace ilusión imaginar nuestros días, nuestras tonterías, nuestras manos juntas y todos esos pequeños recuerdos que todavía nos quedan por crear.</p>
+      <p>También quiero que recuerdes que no tienes que ser perfecta para que te quiera. Quiero que puedas ser tú, estar cómoda siendo tú y sentirte querida incluso en los días en que a ti te cueste verte con los mismos ojos con los que te veo yo.</p>
+      <p>No te prometo que siempre sabré decirlo todo perfectamente. Sí quiero seguir aprendiendo a escucharte, cuidarte y demostrarte mi cariño con hechos, además de con mis mensajes kilométricos.</p>
+      <p>Y si algún día vuelves a preguntarte cuánto te quiero, acuérdate de esto: yo soy ese chico que te escribe como si el corazón le fuera más rápido que los dedos y que, incluso cuando intenta resumirlo, termina diciéndote otra vez que te ama. 💙</p>
+      <p>Te amo, mi Azul. Muchísimo.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Palabras tuyas, de verdad</div>
+    <h2>Pequeños pedacitos de nuestros chats</h2>
+    <p>Estas frases están tomadas de tus mensajes a Azul. Dejé algunas tal como las escribiste, con toda esa emoción tan tuya.</p>
+    <div class="quote-grid">
+      <article class="quote">
+        <p>“TE AMO COMNNN TODAAAAA MI ALMA YYY CONNN TODOOO MI SERRRRR”</p>
+        <small>1 de julio de 2026 · @mo_shanxd</small>
+      </article>
+      <article class="quote">
+        <p>“QUIERO EDTAR SOLOOOO CONTIGOOOOOO EN. TOFAS LAS VIDASSSSS”</p>
+        <small>26 de septiembre de 2026 · @mo_shanxd</small>
+      </article>
+      <article class="quote">
+        <p>“CUDIATEEE LUCHSISIMOOOO QUE QUIEROOOO ESTAR CONTIGO TOFA MI VDIAA”</p>
+        <small>17 de octubre de 2026 · @mo_shanxd</small>
+      </article>
+      <article class="quote">
+        <p>“Te amo muchísimo” 💙</p>
+        <small>18 de octubre de 2026 · @mo_shanxd</small>
+      </article>
+      <article class="quote">
+        <p>“TE AMO MASHSHSHSH” 💙</p>
+        <small>30 de julio de 2026 · @mo_shanxd</small>
+      </article>
+      <article class="quote">
+        <p>“ERWS LA MEJOR NOCIAAAA”</p>
+        <small>17 de octubre de 2026 · @mo_shanxd</small>
+      </article>
+    </div>
+    <p class="note">Nota: las frases conservan tus expresiones y algunas faltas/abreviaturas originales; las fechas corresponden a los mensajes encontrados en los archivos compartidos.</p>
+  </section>
+
+  <section class="card center">
+    <div class="eyebrow">Y ahora… una pregunta</div>
+    <h2>Hay una cosa que quiero preguntarte de una forma especial.</h2>
+    <p>Respira hondo, mi reina. Cuando estés lista, pulsa aquí. 💙</p>
+    <button class="btn" id="reveal" type="button">Tengo algo que preguntarte ✨</button>
+    <div class="proposal" id="proposal" aria-live="polite">
+      <div class="big-heart" aria-hidden="true">💙</div>
+      <div class="answer">Azul, ¿quieres casarte conmigo algún día?</div>
+      <p>No te lo pregunto para que tengas que responder de una manera concreta ni para correr antes de tiempo. Te lo pregunto porque, cuando imagino el futuro que me hace ilusión, me gusta imaginarlo contigo: creciendo, aprendiendo a querernos mejor y construyendo algo bonito, paso a paso.</p>
+      <p>Y mientras ese futuro llega, quiero seguir eligiéndote en lo cotidiano: en los días fáciles, en los difíciles, en las risas tontas y en cada nuevo recuerdo que hagamos.</p>
+      <p><strong>Te amo, mi reina. 💙🪻</strong></p>
+      <div class="signature">Con todo mi corazón · tu amorcito</div>
+    </div>
+  </section>
+  <footer>Hecho con flores azules, corazones y muchísimo cariño. 💙</footer>
+</main>
+<script>
+(function(){
+  const sky=document.getElementById('sky');
+  const symbols=['🪻','💙','✦','❀','🩵'];
+  for(let i=0;i<28;i++){
+    const el=document.createElement('span');
+    el.className=i%3===0?'sparkle':'petal';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=(Math.random()*100)+'%';
+    el.style.animationDelay=(-Math.random()*18)+'s';
+    el.style.animationDuration=(i%3===0?(2.5+Math.random()*3):(12+Math.random()*15))+'s';
+    el.style.fontSize=(12+Math.random()*19)+'px';
+    sky.appendChild(el);
+  }
+  document.getElementById('reveal').addEventListener('click',function(){
+    const panel=document.getElementById('proposal');
+    panel.classList.add('show');
+    this.textContent='Una pregunta con todo mi corazón 💙';
+    this.setAttribute('aria-expanded','true');
+    panel.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+  });
+})();
+</script>
+</body>
+</html>
